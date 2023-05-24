@@ -39,6 +39,39 @@ function shareURL() {
   document.body.removeChild(dummy);
 }
 
+function shareMessage() {
+  if (!Kakao.isInitialized()) Kakao.init('13549ed13612d5fe700e1accda0667f1');
+
+  Kakao.Share.sendDefault({
+    objectType: 'feed',
+    content: {
+      title: '아기사자 MBTI 테스트',
+      description: '나는 어떤 아기사자일까요? MBTI 기반으로 알아보는 아기사자 테스트 🦁',
+      imageUrl:
+        'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+      link: {
+        // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+        mobileWebUrl: 'https://main--leafy-dango-e9fd54.netlify.app',
+        webUrl: 'https://main--leafy-dango-e9fd54.netlify.app',
+      },
+    },
+    social: {
+      likeCount: 286,
+      commentCount: 45,
+      sharedCount: 1045,
+    },
+    buttons: [
+      {
+        title: '지금 검사하기',
+        link: {
+          mobileWebUrl: 'https://main--leafy-dango-e9fd54.netlify.app',
+          webUrl: 'https://main--leafy-dango-e9fd54.netlify.app',
+        },
+      },
+    ],
+  });
+}
+
 $("#A").click(function() {
 
   if (num === 13) {
@@ -50,8 +83,6 @@ $("#A").click(function() {
     snTypeScore < 2 ? (mbti += "N") : (mbti += "S");
     tfTypeScore < 2 ? (mbti += "F") : (mbti += "T");
     jpTypeScore < 2 ? (mbti += "P") : (mbti += "J");
-  
-    console.log(mbti);
   
     $(".subtitle").html(result[mbti]["subtitle"]);
     $(".explain").html(result[mbti]["explain"]);
@@ -79,8 +110,6 @@ $("#B").click(function() {
     snTypeScore < 2 ? (mbti += "N") : (mbti += "S");
     tfTypeScore < 2 ? (mbti += "F") : (mbti += "T");
     jpTypeScore < 2 ? (mbti += "P") : (mbti += "J");
-  
-    console.log(mbti);
   
     $(".subtitle").html(result[mbti]["subtitle"]);
     $(".explain").html(result[mbti]["explain"]);
