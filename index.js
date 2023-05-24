@@ -48,7 +48,7 @@ function shareMessage() {
       title: '아기사자 MBTI 테스트',
       description: '나는 어떤 아기사자일까요? MBTI 기반으로 알아보는 아기사자 테스트 🦁',
       imageUrl:
-        'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+        'https://sm.ign.com/ign_kr/gallery/l/lion-king-/lion-king-trailer-comparison_fbap.jpg',
       link: {
         // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
         mobileWebUrl: 'https://main--leafy-dango-e9fd54.netlify.app',
